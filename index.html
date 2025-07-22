@@ -1,76 +1,45 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Variedades Laga | Llantas</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variedades Laga</title>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
-<header>
-  <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo animar-logo" />
-  <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#llantas">Llantas</a></li>
-      <li><a href="#nosotros">Sobre Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+  <header id="encabezado">
+    <img src="logo.png" alt="Logo" class="logo" id="logo" />
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="inicio" class="seccion animada">
-  <h2>Bienvenido a Variedades Laga</h2>
-  <p>Calidad, seguridad y estilo en cada llanta.</p>
-</section>
+  <main>
+    <section id="inicio" class="seccion visible">
+      <h2>Bienvenido a Variedades Laga</h2>
+      <p>Explora nuestros productos y promociones.</p>
+    </section>
 
-<section id="llantas" class="seccion animada">
-  <h2>Nuestras Llantas</h2>
-  <div class="productos">
-    <div class="producto">
-      <img src="https://i.imgur.com/YqI7Z4C.png" alt="Llanta 1" />
-      <h3>Llanta Deportiva</h3>
-      <p>$89.99</p>
-    </div>
-    <div class="producto">
-      <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2" />
-      <h3>Llanta Todo Terreno</h3>
-      <p>$109.99</p>
-    </div>
-  </div>
-</section>
+    <section id="nosotros" class="seccion">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos una tienda comprometida con la calidad.</p>
+    </section>
 
-<section id="nosotros" class="seccion animada">
-  <h2>Sobre Nosotros</h2>
-  <p>Somos una empresa ecuatoriana con pasión por el rendimiento y seguridad en la carretera. Ofrecemos las mejores llantas del mercado con atención personalizada.</p>
-</section>
+    <section id="contacto" class="seccion">
+      <h2>Contacto</h2>
+      <p>¡Escríbenos para más información!</p>
+    </section>
+  </main>
 
-<section id="contacto" class="seccion animada">
-  <h2>Contacto</h2>
-  <p>Email: contacto@variedadelaga.com</p>
-  <p>Teléfono: +593 987 654 321</p>
-</section>
+  <footer>
+    <p>&copy; 2025 Variedades Laga</p>
+  </footer>
 
-<footer>
-  <p>&copy; 2025 Variedades Laga. Todos los derechos reservados.</p>
-</footer>
-
-<!-- Botones flotantes -->
-
-<a href="https://api.whatsapp.com/send?phone=593987644613" class="social-button WhatsApp" target="_blank" title="Escribir por WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
-</a>
-
-<a href="https://www.facebook.com/profile.php?id=100040087674237" class="social-button Facebook" target="_blank" title="Ir a Facebook">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
-</a>
-
-<a href="https://www.tiktok.com/@variedadeslagallantas" class="social-button tiktok" target="_blank" title="Ver TikTok">
-  <img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" alt="TikTok" />
-</a>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
