@@ -1,42 +1,29 @@
-// Animar secciones al hacer scroll
-const secciones = document.querySelectorAll('.seccion');
-
-function animarSecciones() {
-  const scrollY = window.pageYOffset + window.innerHeight - 100;
-
-  secciones.forEach(seccion => {
-    if (scrollY > seccion.offsetTop) {
-      seccion.classList.add('visible');
-    }
-  });
-}
-
-window.addEventListener('scroll', animarSecciones);
-window.addEventListener('load', animarSecciones);
-
-// Hacer girar el logo al hacer clic en los links del menú
-const logo = document.querySelector('.logo');
-const links = document.querySelectorAll('nav a');
-
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    logo.classList.add('girando');
-    setTimeout(() => logo.classList.remove('girando'), 1000);
-  });
+// Mostrar el logo en miniatura al hacer scroll
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 100) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
-// Mostrar u ocultar header según scroll
-let lastScrollY = window.pageYOffset;
-const header = document.querySelector('header');
+// Desvanecimiento suave al entrar en vista
+const secciones = document.querySelectorAll('.seccion');
 
-window.addEventListener('scroll', () => {
-  const currentScrollY = window.pageYOffset;
+const mostrarSeccion = () => {
+  secciones.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add('visible');
+    }
+  });
+};
 
-  if (currentScrollY > lastScrollY && currentScrollY > 100) {
-    header.classList.add('oculto');
-  } else {
-    header.classList.remove('oculto');
-  }
+window.addEventListener('scroll', mostrarSeccion);
+window.addEventListener('load', mostrarSeccion);
 
-  lastScrollY = currentScrollY;
+// Al hacer clic en el logo, subir al inicio
+document.getElementById('logo').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
