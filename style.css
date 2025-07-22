@@ -12,6 +12,23 @@ body {
   scroll-behavior: smooth;
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  color: white;
+  overflow: hidden;
+  
+  max-height: 0; /* menú oculto */
+  transition: max-height 0.5s ease; /* animación suave */
+}
+
+.menu.open {
+  max-height: 200px; /* altura cuando está abierto */
+}
+
 header {
   background: #111;
   color: white;
