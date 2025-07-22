@@ -48,21 +48,89 @@
       right: 20px;
       background-color: #000000;
     }
+
+    /* Estilo del slider */
+    #llantas {
+      padding: 20px;
+      text-align: center;
+    }
+
+    #llantas h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slider img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    /* Estilo adicional para mejorar la experiencia de usuario */
+    .slider-container:hover .prev, .slider-container:hover .next {
+      opacity: 0.8;
+    }
+
+    .producto h3 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .producto p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-top: 5px;
+    }
   </style>
 </head>
 <body>
 
   <header class="header" id="header">
-  <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
-  <h1 id="titulo">Variedades Laga</h1>
-  <nav>
-    <ul>
-      <li><a href="#inicio" class="nav-link">Inicio</a></li>
-      <li><a href="#llantas" class="nav-link">Llantas</a></li>
-      
-    </ul>
-  </nav>
-</header>
+    <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
+    <h1 id="titulo">Variedades Laga</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#llantas" class="nav-link">Llantas</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section id="inicio" class="seccion animada">
     <h2>Bienvenido a Variedades Laga</h2>
@@ -71,14 +139,26 @@
 
   <section id="llantas" class="seccion animada">
     <h2>Nuestras Llantas</h2>
+
+    <!-- Carrusel de imágenes (Slider) -->
+    <div class="slider-container">
+      <div class="slider">
+        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&_nc_zt=23&_nc_ht=scontent.fuio1-2.fna&_nc_gid=0vpF2k_vqo0aNw2wA59hyg&oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&oe=6885E3B7" alt="Llanta 1">
+        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2">
+        <img src="https://via.placeholder.com/600x400?text=Llanta+Deportiva+3" alt="Llanta 3">
+      </div>
+
+      <!-- Botones de navegación -->
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
     <div class="productos">
       <div class="producto">
-        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&_nc_zt=23&_nc_ht=scontent.fuio1-2.fna&_nc_gid=0vpF2k_vqo0aNw2wA59hyg&oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&oe=6885E3B7" alt="Llanta 1">
         <h3>Llanta Deportiva</h3>
         <p>$89.99</p>
       </div>
       <div class="producto">
-        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2">
         <h3>Llanta Todo Terreno</h3>
         <p>$109.99</p>
       </div>
@@ -117,6 +197,25 @@
     <img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" alt="TikTok">
   </a>
 
-  <script src="script.js"></script>
+  <script>
+    let index = 0;
+
+    function moveSlide(direction) {
+      const slides = document.querySelectorAll('.slider img');
+      const totalSlides = slides.length;
+
+      index += direction;
+
+      if (index >= totalSlides) index = 0;
+      if (index < 0) index = totalSlides - 1;
+
+      document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(() => {
+      moveSlide(1);
+    }, 3000);
+  </script>
+
 </body>
 </html>
