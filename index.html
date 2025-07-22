@@ -1,4 +1,6 @@
-<html lang="es"><head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Variedades Laga | Llantas</title>
@@ -22,7 +24,7 @@
     .social-button img {
       width: 40px;
       height: 40px;
-      border-radius: 50%; /* Asegura que el icono dentro del botón sea redondo */
+      border-radius: 50%;
     }
 
     .social-button:hover {
@@ -46,63 +48,151 @@
       right: 20px;
       background-color: #000000;
     }
+
+    /* Estilo de las llantas */
+    #llantas {
+      padding: 20px;
+      text-align: center;
+    }
+
+    #llantas h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .producto {
+      width: 250px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .producto p {
+      font-size: 1.2rem;
+      color: #333;
+      margin-top: 5px;
+    }
+
+    /* Medias Queries para hacer la página responsiva */
+    @media (max-width: 768px) {
+      #llantas h2 {
+        font-size: 1.5rem;
+      }
+
+      .producto {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #llantas h2 {
+        font-size: 1.2rem;
+      }
+
+      .producto {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header class="header scrolled" id="header">
-  <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
-  <h1 id="titulo">Variedades Laga</h1>
-  <nav>
-    <ul>
-      <li><a href="#inicio" class="nav-link">Inicio</a></li>
-      <li><a href="#llantas" class="nav-link">Llantas</a></li>
-      
-    </ul>
-  </nav>
-</header>
+  <header class="header" id="header">
+    <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
+    <h1 id="titulo">Variedades Laga</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#llantas" class="nav-link">Llantas</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section id="inicio" class="seccion animada visible">
+  <section id="inicio" class="seccion animada">
     <h2>Bienvenido a Variedades Laga</h2>
     <p>Calidad, seguridad y estilo en cada llanta.</p>
   </section>
 
-  <section id="llantas" class="seccion animada visible">
+  <section id="llantas" class="seccion animada">
     <h2>Nuestras Llantas</h2>
+
     <div class="productos">
+      <!-- Llanta 1 -->
       <div class="producto">
-        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&amp;_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&amp;_nc_zt=23&amp;_nc_ht=scontent.fuio1-2.fna&amp;_nc_gid=0vpF2k_vqo0aNw2wA59hyg&amp;oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&amp;oe=6885E3B7" alt="Llanta 1">
+        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&_nc_zt=23&_nc_ht=scontent.fuio1-2.fna&_nc_gid=0vpF2k_vqo0aNw2wA59hyg&oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&oe=6885E3B7" alt="Llanta Deportiva">
         <h3>Llanta Deportiva</h3>
         <p>$89.99</p>
-    
       </div>
+
+      <!-- Llanta 2 -->
       <div class="producto">
-        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2">
+        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta Todo Terreno">
         <h3>Llanta Todo Terreno</h3>
         <p>$109.99</p>
       </div>
+
+      <!-- Llanta 3 -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Llanta+Deportiva+3" alt="Llanta de carretera">
+        <h3>Llanta de Carretera</h3>
+        <p>$79.99</p>
+      </div>
+
+      <!-- Llanta 4 -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Llanta+4" alt="Llanta para camioneta">
+        <h3>Llanta para Camioneta</h3>
+        <p>$119.99</p>
+      </div>
+
+      <!-- Llanta 5 -->
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Llanta+5" alt="Llanta 4x4">
+        <h3>Llanta 4x4</h3>
+        <p>$129.99</p>
+      </div>
+
     </div>
   </section>
 
-  <section id="nosotros" class="seccion animada visible">
+  <section id="nosotros" class="seccion animada">
     <h2>Sobre Nosotros</h2>
     <p>Somos una empresa ecuatoriana con pasión por el rendimiento y seguridad en la carretera. Ofrecemos las mejores llantas del mercado con atención personalizada.</p>
   </section>
 
-  <section id="contacto" class="seccion animada visible">
+  <section id="contacto" class="seccion animada">
     <h2>Contacto</h2>
     <p>Email: contacto@variedadelaga.com</p>
     <p>Teléfono: +593 987 654 321</p>
   </section>
 
   <footer>
-    <p>© 2025 Variedades Laga. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Variedades Laga. Todos los derechos reservados.</p>
   </footer>
 
   <!-- BOTONES FLOTANTES -->
-
   <!-- WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=593987644613&amp;text&amp;context=AfcHWWSHDcfCfqSrJA-vDogc7P2V6qnqeLzVDok_RW5kHTx5AhLRgdGWoFNBzKDXNROsL-pwwp_R1d1V5Vlym_dLi9SVeyc4kxJ8PPcZwV6R9GNOAwvl7FD3w-wQiJhLJpaH1bUNb_EVnz7OC0AFe1AiWg&amp;source&amp;app=facebook" class="social-button whatsapp" target="_blank" title="Escribir por WhatsApp">
+  <a href="https://api.whatsapp.com/send?phone=593987644613&text&context=AfcHWWSHDcfCfqSrJA-vDogc7P2V6qnqeLzVDok_RW5kHTx5AhLRgdGWoFNBzKDXNROsL-pwwp_R1d1V5Vlym_dLi9SVeyc4kxJ8PPcZwV6R9GNOAwvl7FD3w-wQiJhLJpaH1bUNb_EVnz7OC0AFe1AiWg&source&app=facebook" class="social-button whatsapp" target="_blank" title="Escribir por WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
   </a>
 
@@ -112,11 +202,9 @@
   </a>
 
   <!-- TikTok -->
-  <a href="https://www.tiktok.com/@variedadeslagallantas?_t=ZM-8yFWzP728Ai&amp;_r=1" class="social-button tiktok" target="_blank" title="Ver TikTok">
+  <a href="https://www.tiktok.com/@variedadeslagallantas?_t=ZM-8yFWzP728Ai&_r=1" class="social-button tiktok" target="_blank" title="Ver TikTok">
     <img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" alt="TikTok">
   </a>
 
-  <script src="script.js"></script>
-
-
-<style>#myIframe { position:absolute; top: 0px; left: 0px; } @media print {  #myIframe { min-width: 100% ;   max-width: 100%;  width: 100%;  border: none; } body {width: 21cm; height: 100%; max-width: 21cm; }  html {height: 100%; width: 21cm; max-width: 21cm;}  @page { margin: 0.4;} }</style></body></html>
+</body>
+</html>
