@@ -13,52 +13,51 @@
     <nav>
       <img src="logo_laga_150x150.png" alt="Logo" id="logo" class="fade-in-scroll">
       <ul>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#ofertas">Ofertas</a></li>
-      </ul>
-    </nav>
-  </header>
+        <li>
 
-  <!-- Banner de bienvenida -->
-  <section id="banner">
-    <h1 class="fade-in-scroll">Bienvenido a Variedades Laga</h1>
-    <p>Las mejores llantas profesionales para tu vehículo.</p>
-  </section>
 
-  <!-- Productos -->
-  <section id="productos">
-    <h2 class="fade-in-scroll">Nuestros Productos</h2>
-    <div class="slider">
-      <div class="slides">
-        <div class="slide"><img src="producto1.jpg" alt="Llantas de alta calidad"></div>
-        <div class="slide"><img src="producto2.jpg" alt="Llantas para 4x4"></div>
-        <div class="slide"><img src="producto3.jpg" alt="Llantas deportivas"></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Formulario de contacto -->
-  <section id="contacto">
-    <h2 class="fade-in-scroll">Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Correo" required>
-      <textarea placeholder="Mensaje" required></textarea>
-      <button type="submit" class="cta-button">Enviar</button>
-    </form>
-  </section>
+<style>
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: opacity 0.3s ease;
+}
+.floating-container.hidden {
+  opacity: 0.3;
+}
+.floating-logo {
+  width: 50px;
+  height: 50px;
+}
+</style>
 
-  <!-- Pop-up de ofertas -->
-  <div class="popup fade-in-scroll" style="display:none;">
-    <p>¡Descuento especial en todas las llantas!</p>
-  </div>
+<div class="floating-container" id="floatingContainer">
+  <a href="https://www.facebook.com/" target="_blank">
+    <img class="floating-logo" src="assets/facebook.png" alt="Facebook">
+  </a>
+  <a href="https://www.tiktok.com/" target="_blank">
+    <img class="floating-logo" src="assets/tiktok.png" alt="TikTok">
+  </a>
+</div>
+<script>
+let lastScrollTop = 0;
+window.addEventListener("scroll", function() {
+  const container = document.getElementById("floatingContainer");
+  let st = window.pageYOffset || document.documentElement.scrollTop;
+  if (st > lastScrollTop){
+    container.classList.add("hidden"); // scrolling down
+  } else {
+    container.classList.remove("hidden"); // scrolling up
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+}, false);
+</script>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Variedades Laga - Todos los derechos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
