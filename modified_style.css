@@ -1,0 +1,114 @@
+
+/* Animaciones de Carga */
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+#logo {
+  animation: logoFadeIn 2s ease-in-out;
+}
+
+/* Hover Effects for Buttons */
+button, .cta-button {
+  transition: all 0.3s ease;
+}
+
+button:hover, .cta-button:hover {
+  background-color: #ff9900;
+  transform: scale(1.1);
+}
+
+/* Hover Effects for Images */
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Scroll Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-scroll {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Slider Styles */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider .slide {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+
+/* Contact Form Animations */
+input, textarea {
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #ff9900;
+  outline: none;
+}
+
+/* Navbar Animation on Scroll */
+.navbar {
+  transition: top 0.3s ease;
+}
+
+.navbar-hidden {
+  top: -100px;
+}
+
+/* Footer Animation */
+footer {
+  transition: transform 0.5s ease-in-out;
+}
+
+footer:hover {
+  transform: scale(1.05);
+}
+
+/* Icon Hover Effects */
+.icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+/* Pop-up Animations */
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup {
+  animation: popupAnimation 0.5s ease-out forwards;
+}
