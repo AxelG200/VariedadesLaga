@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Variedades Laga | Llantas</title>
@@ -48,142 +46,63 @@
       right: 20px;
       background-color: #000000;
     }
-
-    /* Estilo del slider */
-    #llantas {
-      padding: 20px;
-      text-align: center;
-    }
-
-    #llantas h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .slider-container {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .slider img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .prev, .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 10px;
-      font-size: 20px;
-      border: none;
-      cursor: pointer;
-    }
-
-    .prev {
-      left: 10px;
-    }
-
-    .next {
-      right: 10px;
-    }
-
-    /* Estilo adicional para mejorar la experiencia de usuario */
-    .slider-container:hover .prev, .slider-container:hover .next {
-      opacity: 0.8;
-    }
-
-    .producto h3 {
-      margin-top: 10px;
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    .producto p {
-      font-size: 1.2rem;
-      color: #333;
-      margin-top: 5px;
-    }
   </style>
 </head>
 <body>
 
-  <header class="header" id="header">
-    <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
-    <h1 id="titulo">Variedades Laga</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-        <li><a href="#llantas" class="nav-link">Llantas</a></li>
-      </ul>
-    </nav>
-  </header>
+  <header class="header scrolled" id="header">
+  <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
+  <h1 id="titulo">Variedades Laga</h1>
+  <nav>
+    <ul>
+      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#llantas" class="nav-link">Llantas</a></li>
+      
+    </ul>
+  </nav>
+</header>
 
-  <section id="inicio" class="seccion animada">
+  <section id="inicio" class="seccion animada visible">
     <h2>Bienvenido a Variedades Laga</h2>
     <p>Calidad, seguridad y estilo en cada llanta.</p>
   </section>
 
-  <section id="llantas" class="seccion animada">
+  <section id="llantas" class="seccion animada visible">
     <h2>Nuestras Llantas</h2>
-
-    <!-- Carrusel de imágenes (Slider) -->
-    <div class="slider-container">
-      <div class="slider">
-        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&_nc_zt=23&_nc_ht=scontent.fuio1-2.fna&_nc_gid=0vpF2k_vqo0aNw2wA59hyg&oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&oe=6885E3B7" alt="Llanta 1">
-        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2">
-        <img src="https://via.placeholder.com/600x400?text=Llanta+Deportiva+3" alt="Llanta 3">
-      </div>
-
-      <!-- Botones de navegación -->
-      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-
     <div class="productos">
       <div class="producto">
+        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&amp;_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&amp;_nc_zt=23&amp;_nc_ht=scontent.fuio1-2.fna&amp;_nc_gid=0vpF2k_vqo0aNw2wA59hyg&amp;oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&amp;oe=6885E3B7" alt="Llanta 1">
         <h3>Llanta Deportiva</h3>
         <p>$89.99</p>
+    
       </div>
       <div class="producto">
+        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2">
         <h3>Llanta Todo Terreno</h3>
         <p>$109.99</p>
       </div>
     </div>
   </section>
 
-  <section id="nosotros" class="seccion animada">
+  <section id="nosotros" class="seccion animada visible">
     <h2>Sobre Nosotros</h2>
     <p>Somos una empresa ecuatoriana con pasión por el rendimiento y seguridad en la carretera. Ofrecemos las mejores llantas del mercado con atención personalizada.</p>
   </section>
 
-  <section id="contacto" class="seccion animada">
+  <section id="contacto" class="seccion animada visible">
     <h2>Contacto</h2>
     <p>Email: contacto@variedadelaga.com</p>
     <p>Teléfono: +593 987 654 321</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Variedades Laga. Todos los derechos reservados.</p>
+    <p>© 2025 Variedades Laga. Todos los derechos reservados.</p>
   </footer>
 
   <!-- BOTONES FLOTANTES -->
 
   <!-- WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=593987644613&text&context=AfcHWWSHDcfCfqSrJA-vDogc7P2V6qnqeLzVDok_RW5kHTx5AhLRgdGWoFNBzKDXNROsL-pwwp_R1d1V5Vlym_dLi9SVeyc4kxJ8PPcZwV6R9GNOAwvl7FD3w-wQiJhLJpaH1bUNb_EVnz7OC0AFe1AiWg&source&app=facebook" class="social-button whatsapp" target="_blank" title="Escribir por WhatsApp">
+  <a href="https://api.whatsapp.com/send?phone=593987644613&amp;text&amp;context=AfcHWWSHDcfCfqSrJA-vDogc7P2V6qnqeLzVDok_RW5kHTx5AhLRgdGWoFNBzKDXNROsL-pwwp_R1d1V5Vlym_dLi9SVeyc4kxJ8PPcZwV6R9GNOAwvl7FD3w-wQiJhLJpaH1bUNb_EVnz7OC0AFe1AiWg&amp;source&amp;app=facebook" class="social-button whatsapp" target="_blank" title="Escribir por WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
   </a>
 
@@ -193,29 +112,11 @@
   </a>
 
   <!-- TikTok -->
-  <a href="https://www.tiktok.com/@variedadeslagallantas?_t=ZM-8yFWzP728Ai&_r=1" class="social-button tiktok" target="_blank" title="Ver TikTok">
+  <a href="https://www.tiktok.com/@variedadeslagallantas?_t=ZM-8yFWzP728Ai&amp;_r=1" class="social-button tiktok" target="_blank" title="Ver TikTok">
     <img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" alt="TikTok">
   </a>
 
-  <script>
-    let index = 0;
+  <script src="script.js"></script>
 
-    function moveSlide(direction) {
-      const slides = document.querySelectorAll('.slider img');
-      const totalSlides = slides.length;
 
-      index += direction;
-
-      if (index >= totalSlides) index = 0;
-      if (index < 0) index = totalSlides - 1;
-
-      document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    setInterval(() => {
-      moveSlide(1);
-    }, 3000);
-  </script>
-
-</body>
-</html>
+<style>#myIframe { position:absolute; top: 0px; left: 0px; } @media print {  #myIframe { min-width: 100% ;   max-width: 100%;  width: 100%;  border: none; } body {width: 21cm; height: 100%; max-width: 21cm; }  html {height: 100%; width: 21cm; max-width: 21cm;}  @page { margin: 0.4;} }</style></body></html>
