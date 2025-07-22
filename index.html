@@ -5,6 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Variedades Laga | Llantas</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Estilos para los botones flotantes -->
+  <style>
+    .social-button {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+      z-index: 9999;
+    }
+
+    .social-button img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .social-button:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp {
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+    }
+
+    .facebook {
+      bottom: 90px;
+      right: 20px;
+      background-color: #1877F2;
+    }
+
+    .tiktok {
+      bottom: 160px;
+      right: 20px;
+      background-color: #000000;
+    }
+  </style>
 </head>
 <body>
 
@@ -56,6 +99,23 @@
   <footer>
     <p>&copy; 2025 Variedades Laga. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- BOTONES FLOTANTES -->
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/593991234567" class="social-button whatsapp" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://facebook.com/tu_pagina" class="social-button facebook" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+  </a>
+
+  <!-- TikTok -->
+  <a href="https://tiktok.com/@tu_usuario" class="social-button tiktok" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok">
+  </a>
 
   <script src="script.js"></script>
 </body>
