@@ -60,25 +60,32 @@
       margin-bottom: 20px;
     }
 
+    /* Contenedor del slider */
     .productos {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      overflow-x: auto;
       gap: 20px;
+      padding: 20px 0;
     }
 
+    /* Cada producto */
     .producto {
-      width: 250px;
+      min-width: 250px;
       text-align: center;
-      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      background-color: #fff;
+      transition: transform 0.3s ease;
     }
 
+    /* Estilo de la imagen */
     .producto img {
       width: 100%;
       height: auto;
       border-radius: 10px;
     }
 
+    /* Estilo del texto */
     .producto h3 {
       margin-top: 10px;
       font-size: 1.5rem;
@@ -89,6 +96,10 @@
       font-size: 1.2rem;
       color: #333;
       margin-top: 5px;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
     }
 
     /* Medias Queries para hacer la página responsiva */
@@ -137,41 +148,40 @@
     <h2>Nuestras Llantas</h2>
 
     <div class="productos">
-      <!-- Llanta 1 -->
+      <!-- Producto 1 -->
       <div class="producto">
         <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&_nc_zt=23&_nc_ht=scontent.fuio1-2.fna&_nc_gid=0vpF2k_vqo0aNw2wA59hyg&oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&oe=6885E3B7" alt="Llanta Deportiva">
         <h3>Llanta Deportiva</h3>
         <p>$89.99</p>
       </div>
 
-      <!-- Llanta 2 -->
+      <!-- Producto 2 -->
       <div class="producto">
         <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta Todo Terreno">
         <h3>Llanta Todo Terreno</h3>
         <p>$109.99</p>
       </div>
 
-      <!-- Llanta 3 -->
+      <!-- Producto 3 -->
       <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Llanta+Deportiva+3" alt="Llanta de carretera">
+        <img src="https://via.placeholder.com/250x250?text=Llanta+Deportiva+3" alt="Llanta de Carretera">
         <h3>Llanta de Carretera</h3>
         <p>$79.99</p>
       </div>
 
-      <!-- Llanta 4 -->
+      <!-- Producto 4 -->
       <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Llanta+4" alt="Llanta para camioneta">
+        <img src="https://via.placeholder.com/250x250?text=Llanta+4" alt="Llanta para Camioneta">
         <h3>Llanta para Camioneta</h3>
         <p>$119.99</p>
       </div>
 
-      <!-- Llanta 5 -->
+      <!-- Producto 5 -->
       <div class="producto">
         <img src="https://via.placeholder.com/250x250?text=Llanta+5" alt="Llanta 4x4">
         <h3>Llanta 4x4</h3>
         <p>$129.99</p>
       </div>
-
     </div>
   </section>
 
