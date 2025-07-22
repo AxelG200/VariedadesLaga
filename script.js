@@ -35,6 +35,12 @@ document.querySelectorAll('.menu a').forEach(link => {
       section.classList.remove('active');
     });
 
+    const btnMenu = document.getElementById('btnMenu');
+const menu = document.getElementById('menu');
+
+btnMenu.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
     const targetSection = document.getElementById(targetId);
     targetSection.classList.add('active');
   });
