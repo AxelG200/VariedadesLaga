@@ -13,3 +13,14 @@ function animarSecciones() {
 
 window.addEventListener('scroll', animarSecciones);
 window.addEventListener('load', animarSecciones);
+
+// Hacer girar el logo al hacer clic en los links del menu
+const logo = document.querySelector('.logo');
+const links = document.querySelectorAll('nav a');
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    logo.classList.add('girando');
+    setTimeout(() => logo.classList.remove('girando'), 1000);
+  });
+});
