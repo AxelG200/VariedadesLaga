@@ -114,3 +114,14 @@ footer {
 .girando {
   animation: girar 1s ease-in-out;
 }
+
+.section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+.section.active {
+  opacity: 1;
+  display: block;
+}
