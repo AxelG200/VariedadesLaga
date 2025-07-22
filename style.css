@@ -97,3 +97,60 @@ footer {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
+/* Header fijo con transición */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+.header.scrolled {
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.header.scrolled #logo {
+  width: 50px;
+}
+
+#titulo {
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.header.scrolled #titulo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Secciones animadas */
+.seccion {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Transicion al hacer clic en nav */
+html {
+  scroll-behavior: smooth;
+}
