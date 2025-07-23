@@ -24,7 +24,7 @@
     .social-button img {
       width: 40px;
       height: 40px;
-      border-radius: 50%;
+      border-radius: 50%; /* Asegura que el icono dentro del botón sea redondo */
     }
 
     .social-button:hover {
@@ -48,93 +48,19 @@
       right: 20px;
       background-color: #000000;
     }
-
-    /* Estilo de las llantas */
-    #llantas {
-      padding: 20px;
-      text-align: center;
-    }
-
-    #llantas h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    /* Contenedor del slider */
-    .productos {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 20px 0;
-    }
-
-    /* Cada producto */
-    .producto {
-      min-width: 250px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      background-color: #fff;
-      transition: transform 0.3s ease;
-    }
-
-    /* Estilo de la imagen */
-    .producto img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    /* Estilo del texto */
-    .producto h3 {
-      margin-top: 10px;
-      font-size: 1.5rem;
-      color: #333;
-    }
-
-    .producto p {
-      font-size: 1.2rem;
-      color: #333;
-      margin-top: 5px;
-    }
-
-    .producto:hover {
-      transform: scale(1.05);
-    }
-
-    /* Medias Queries para hacer la página responsiva */
-    @media (max-width: 768px) {
-      #llantas h2 {
-        font-size: 1.5rem;
-      }
-
-      .producto {
-        width: 100%;
-        max-width: 350px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #llantas h2 {
-        font-size: 1.2rem;
-      }
-
-      .producto {
-        width: 100%;
-        max-width: 300px;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <header class="header" id="header">
-    <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo">
-    <h1 id="titulo">Variedades Laga</h1>
+  <header>
+    <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo animar-logo">
+    <h1>Variedades Laga</h1>
     <nav>
       <ul>
-        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-        <li><a href="#llantas" class="nav-link">Llantas</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#llantas">Llantas</a></li>
+        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -146,41 +72,16 @@
 
   <section id="llantas" class="seccion animada">
     <h2>Nuestras Llantas</h2>
-
     <div class="productos">
-      <!-- Producto 1 -->
       <div class="producto">
-        <img src="https://scontent.fuio1-2.fna.fbcdn.net/v/t39.30808-6/507573948_1470444417635133_4404259344354981717_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gYwoMVP8MDIQ7kNvwGXm5Tx&_nc_oc=AdnrlfwgYx0wrqd1mOnCScnGAv0iOT-S_JCg9zwQAHqryVqF7XXj_vus0RySGvk0kSkMX1hrdYKDYbfQbXhkPMV_&_nc_zt=23&_nc_ht=scontent.fuio1-2.fna&_nc_gid=0vpF2k_vqo0aNw2wA59hyg&oh=00_AfTQmBZS8EM5D-d0MAci0NmYctNAkVru8R40VvMaHmjFLw&oe=6885E3B7" alt="Llanta Deportiva">
+        <img src="https://i.imgur.com/YqI7Z4C.png" alt="Llanta 1">
         <h3>Llanta Deportiva</h3>
         <p>$89.99</p>
       </div>
-
-      <!-- Producto 2 -->
       <div class="producto">
-        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta Todo Terreno">
+        <img src="https://i.imgur.com/dkNz4FG.png" alt="Llanta 2">
         <h3>Llanta Todo Terreno</h3>
         <p>$109.99</p>
-      </div>
-
-      <!-- Producto 3 -->
-      <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Llanta+Deportiva+3" alt="Llanta de Carretera">
-        <h3>Llanta de Carretera</h3>
-        <p>$79.99</p>
-      </div>
-
-      <!-- Producto 4 -->
-      <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Llanta+4" alt="Llanta para Camioneta">
-        <h3>Llanta para Camioneta</h3>
-        <p>$119.99</p>
-      </div>
-
-      <!-- Producto 5 -->
-      <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Llanta+5" alt="Llanta 4x4">
-        <h3>Llanta 4x4</h3>
-        <p>$129.99</p>
       </div>
     </div>
   </section>
@@ -201,6 +102,7 @@
   </footer>
 
   <!-- BOTONES FLOTANTES -->
+
   <!-- WhatsApp -->
   <a href="https://api.whatsapp.com/send?phone=593987644613&text&context=AfcHWWSHDcfCfqSrJA-vDogc7P2V6qnqeLzVDok_RW5kHTx5AhLRgdGWoFNBzKDXNROsL-pwwp_R1d1V5Vlym_dLi9SVeyc4kxJ8PPcZwV6R9GNOAwvl7FD3w-wQiJhLJpaH1bUNb_EVnz7OC0AFe1AiWg&source&app=facebook" class="social-button whatsapp" target="_blank" title="Escribir por WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
@@ -216,5 +118,6 @@
     <img src="https://www.logo.wine/a/logo/TikTok/TikTok-Logo.wine.svg" alt="TikTok">
   </a>
 
+  <script src="script.js"></script>
 </body>
 </html>
