@@ -11,6 +11,7 @@ body {
   color: #000000;
 }
 
+/* HEADER */
 header {
   position: fixed;
   width: 100%;
@@ -44,6 +45,18 @@ header.scrolled .logo {
   height: 50px;
 }
 
+#titulo {
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+  color: #d60000;
+}
+
+header.scrolled #titulo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* MENU */
 nav.menu {
   margin-top: 10px;
 }
@@ -59,14 +72,17 @@ nav ul {
 }
 
 nav a {
- color: #fffcfc;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  background-color: #d60000;
 }
 
 nav a:hover {
-  color: #00bcd4;
+  background-color: #ff0000;
 }
 
 /* SECCIONES */
@@ -84,6 +100,29 @@ nav a:hover {
   transform: translateY(0);
 }
 
+.productos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.producto img {
+  width: 150px;
+  height: auto;
+}
+
+/* UBICACION */
+.map-buttons {
+  margin-top: 20px;
+}
+
+.map-buttons img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -92,64 +131,47 @@ footer {
   padding: 20px;
 }
 
-/* ANIMACIONES */
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-/* Header fijo con transición */
-.header {
+/* BOTONES FLOTANTES */
+.social-button {
   position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #000000;
-  padding: 10px 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
-  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+  z-index: 9999;
 }
 
-.logo {
-  width: 150px;
-  height: auto;
-  transition: all 0.5s ease;
+.social-button img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.header.scrolled {
-  justify-content: space-between;
-  padding: 5px 20px;
+.social-button:hover {
+  transform: scale(1.1);
 }
 
-.header.scrolled #logo {
-  width: 50px;
+.whatsapp {
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
 }
 
-#titulo {
-  font-size: 2rem;
-  transition: opacity 0.3s ease;
+.facebook {
+  bottom: 90px;
+  right: 20px;
+  background-color: #1877F2;
 }
 
-.header.scrolled #titulo {
-  opacity: 0;
-  pointer-events: none;
+.tiktok {
+  bottom: 160px;
+  right: 20px;
+  background-color: #000000;
 }
-
-/* Secciones animadas */
-.seccion {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
-
-.seccion.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Transicion al hacer clic en nav */
 html {
   scroll-behavior: smooth;
