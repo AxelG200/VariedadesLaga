@@ -1,19 +1,25 @@
-// Mostrar secciones con animación cuando estén en vista
+// Cambiar tamaño y posición del header y logo al hacer scroll
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 20) {
+    header.classList.add('small');
+  } else {
+    header.classList.remove('small');
+  }
+});
+
+// Animar la aparición de secciones al hacer scroll
 const secciones = document.querySelectorAll('.seccion');
 
-const mostrarSeccion = () => {
-  secciones.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add('visible');
+function mostrarSecciones() {
+  const triggerBottom = window.innerHeight * 0.8;
+  secciones.forEach(seccion => {
+    const topSeccion = seccion.getBoundingClientRect().top;
+    if (topSeccion < triggerBottom) {
+      seccion.classList.add('visible');
     }
   });
-};
+}
 
-window.addEventListener('scroll', mostrarSeccion);
-window.addEventListener('load', mostrarSeccion);
-
-// Al hacer clic en el logo, subir suave al inicio
-document.getElementById('logo').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+window.addEventListener('scroll', mostrarSecciones);
+window.addEventListener('load', mostrarSecciones);
