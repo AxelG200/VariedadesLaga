@@ -1,14 +1,4 @@
-// Mostrar logo mini al hacer scroll
-window.addEventListener('scroll', () => {
-  const header = document.getElementById('header');
-  if (window.scrollY > 100) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-
-// Animar secciones al aparecer en pantalla
+// Mostrar secciones con animación cuando estén en vista
 const secciones = document.querySelectorAll('.seccion');
 
 const mostrarSeccion = () => {
@@ -23,7 +13,7 @@ const mostrarSeccion = () => {
 window.addEventListener('scroll', mostrarSeccion);
 window.addEventListener('load', mostrarSeccion);
 
-// Clic en logo = volver al inicio
+// Al hacer clic en el logo, subir suave al inicio
 document.getElementById('logo').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
