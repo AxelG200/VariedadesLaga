@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <header id="header">
     <img src="logo_laga_150x150.png" alt="Logo Variedades Laga" class="logo" id="logo" />
     <h1><span class="blanco">Variedades</span> <span class="rojo">LAGA</span></h1>
 
@@ -24,15 +24,31 @@
   </header>
 
   <section id="inicio" class="seccion animada">
-    <h2>Bienvenido a Variedades Laga</h2>
+    <h2>
+      <span class="blanco">Bienvenido a Variedades</span> <span class="rojo">LAGA</span>
+    </h2>
     <p>Calidad, seguridad y estilo en cada llanta.</p>
   </section>
 
+  <!-- Apartado gráfico con animaciones -->
+  <section id="apartado-grafico" class="seccion animada">
+    <h2>Descubre la diferencia con Variedades Laga</h2>
+    <div class="animacion-grafica">
+      <div class="circulo circulo1"></div>
+      <div class="circulo circulo2"></div>
+      <div class="circulo circulo3"></div>
+      <div class="circulo circulo4"></div>
+    </div>
+    <p>
+      Calidad, tecnología y estilo que marcan la diferencia en cada viaje.
+    </p>
+  </section>
+
   <section id="llantas" class="seccion animada">
-    <div class="productos">
+    <div class="productos carrusel">
       <div class="producto">
         <img src="https://scontent.fuio1-1.fna.fbcdn.net/v/t39.30808-6/497648305_1445468366799405_6837067560978401230_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=TcFyFfQ7rdYQ7kNvwHdQj8o&_nc_oc=AdkDR40V9VTed3goWOCTed4Mlv7lrwH9YVJhVrSZ0RISTD1oGIPWG2mFMoetGangTF0xpUP9VujFadTJVP8-OcPa&_nc_zt=23&_nc_ht=scontent.fuio1-1.fna&_nc_gid=EKDnMD8RyObSrX7jlbD_Mw&oh=00_AfT24lB1cY0TErl7UgZQvc89YHDEQMKu-pAxUXoCsQiz7g&oe=6886049B" alt="Llanta 1" />
-          <h3>TORNEL 205/55R16</h3>
+        <h3>TORNEL 205/55R16</h3>
         <p>$69.99</p>
       </div>
       <div class="producto">
@@ -43,17 +59,13 @@
     </div>
   </section>
 
-  <section id="ubicacion" class="seccion animada">
-    <h2>Ubicación</h2>
-    <p>Encuentra nuestra tienda en Waze o Google Maps:</p>
-    <div class="ubicacion-botones">
-      <a href="https://www.waze.com/es/live-map/directions/variedades-laga-llantas-y-mas-av.-eloy-alfaro-5-quito?to=place.w.184485639.1845052996.24477789" target="_blank" title="Ir a Waze">
-        <img src="https://upload.wikimedia.org/wikipedia/fr/0/05/Waze-icon-2020.svg" alt="Waze" />
-      </a>
-      <a href="https://www.google.com/maps/dir//Eloy+Alfaro,+y,+Quito+170133/@-0.1219731,-78.554202,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x91d58f29279dbcbb:0xd956dbde9daa8556!2m2!1d-78.4718!2d-0.1219732?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Ir a Google Maps">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/800px-Google_Maps_icon_%282020%29.svg.png" alt="Google Maps" />
-      </a>
-    </div>
+  <section id="ubicacion" class="ubicacion-mini animada">
+    <a href="https://www.waze.com/es/live-map/directions/variedades-laga-llantas-y-mas-av.-eloy-alfaro-5-quito?to=place.w.184485639.1845052996.24477789" target="_blank" title="Ir a Waze">
+      <img src="https://upload.wikimedia.org/wikipedia/fr/0/05/Waze-icon-2020.svg" alt="Waze" />
+    </a>
+    <a href="https://www.google.com/maps/dir//Eloy+Alfaro,+y,+Quito+170133/@-0.1219731,-78.554202,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x91d58f29279dbcbb:0xd956dbde9daa8556!2m2!1d-78.4718!2d-0.1219732?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Ir a Google Maps">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/800px-Google_Maps_icon_%282020%29.svg.png" alt="Google Maps" />
+    </a>
   </section>
 
   <footer>
@@ -76,3 +88,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
