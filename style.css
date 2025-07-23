@@ -24,6 +24,7 @@ header {
   transition: all 0.5s ease;
   z-index: 999;
   padding: 20px;
+  text-align: center;
 }
 
 header.scrolled {
@@ -31,6 +32,7 @@ header.scrolled {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 30px;
+  text-align: left;
 }
 
 .logo {
@@ -46,7 +48,7 @@ header.scrolled .logo {
 }
 
 #titulo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   transition: opacity 0.3s ease;
   color: #d60000;
 }
@@ -68,7 +70,9 @@ header.scrolled nav.menu {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }
 
 nav a {
@@ -77,8 +81,8 @@ nav a {
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 4px;
-  transition: background 0.3s;
   background-color: #d60000;
+  transition: background 0.3s;
 }
 
 nav a:hover {
@@ -86,33 +90,53 @@ nav a:hover {
 }
 
 /* SECCIONES */
-.seccion {
-  padding: 100px 20px;
-  min-height: 100vh;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1s ease;
+main {
+  padding-top: 160px;
 }
 
-.seccion.visible {
-  opacity: 1;
-  transform: translateY(0);
+.seccion {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.card p {
+  font-size: 1.1rem;
 }
 
 .productos {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.producto {
+  width: 200px;
 }
 
 .producto img {
-  width: 150px;
+  width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
-/* UBICACION */
 .map-buttons {
   margin-top: 20px;
 }
@@ -172,7 +196,29 @@ footer {
   right: 20px;
   background-color: #000000;
 }
-/* Transicion al hacer clic en nav */
-html {
-  scroll-behavior: smooth;
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .map-buttons img {
+    width: 40px;
+  }
 }
